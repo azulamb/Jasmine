@@ -85,19 +85,25 @@ public class JasmineData
 
 	/**
 	 * Write JSON string.(No-space)
+	 * @param w Writer.
+	 * @throws IOException error.
 	 */
 	public void writeData( Writer w ) throws IOException { w.write( this.getString() ); }
 
 	/**
 	 * Write JSON string.(Human-readable)
+	 * @param w Writer.
 	 * @param deep Indent count.
+	 * @throws IOException error.
 	 */
 	public void writeData( Writer w, int deep ) throws IOException { this.writeData( w, deep, "	" ); }
 
 	/**
 	 * Return JSON string.(Human-readable)
+	 * @param w Writer.
 	 * @param deep Indent count.
 	 * @param spacer Indent spacer.
+	 * @throws IOException error.
 	 */
 	public void writeData( Writer w, int deep, String spacer ) throws IOException { w.write( this.getString( deep, spacer ) ); }
 }

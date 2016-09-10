@@ -46,6 +46,8 @@ public class Jasmine
 
 	/**
 	 * @param json JSON string.(ex "{\"text\":\"hello\",\"num\":1}" )
+	 * @throws IOException error.
+	 * @return JasmineData.
 	 */
 	public static JasmineData parse( String json ) throws IOException
 	{
@@ -54,22 +56,40 @@ public class Jasmine
 
 	/**
 	 * @param in InputStream. Charset if UTF-8.
+	 * @throws IOException error.
+	 * @return JasmineData.
 	 */
 	public static JasmineData parse( InputStream in ) throws IOException
 	{
 		return new JasmineParser( new InputStreamReader( in, "UTF-8" ) ).parse();
 	}
 
+	/**
+	 * @param is InputStreamReader.
+	 * @throws IOException error.
+	 * @return JasmineData.
+	 */
 	public static JasmineData parse( InputStreamReader is ) throws IOException
 	{
 		return new JasmineParser( is ).parse();
 	}
 
+	/**
+	 * @param file Read file,
+	 * @throws IOException error.
+	 * @throws UnsupportedEncodingException error.
+	 * @return JasmineData.
+	 */
 	public static JasmineData parse( File file ) throws UnsupportedEncodingException, IOException
 	{
 		return new JasmineParser( new InputStreamReader( new FileInputStream( file ), "UTF-8" ) ).parse();
 	}
 
+	/**
+	 * @param r Reader.
+	 * @throws IOException error.
+	 * @return JasmineData.
+	 */
 	public static JasmineData parse( Reader r ) throws IOException
 	{
 		return new JasmineParser( r ).parse();
@@ -77,6 +97,7 @@ public class Jasmine
 
 	/**
 	 * @param file Write file.
+	 * @throws IOException error.
 	 * @param data JSON data.(JasmineData,JasmineObject,JasmineArray, ...etc)
 	 */
 	public static void write( File file, JasmineData data ) throws IOException

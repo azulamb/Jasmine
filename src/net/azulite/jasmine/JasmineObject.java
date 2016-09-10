@@ -67,6 +67,7 @@ public class JasmineObject extends JasmineData
 	public JasmineObject getObject() { return this; }
 
 	/**
+	 * @param key Key name.
 	 * @return Return value.
 	 */
 	public JasmineData get( String key ) { return Jasmine.nullCheck( object.get( key ) ); }
@@ -107,7 +108,7 @@ public class JasmineObject extends JasmineData
 
 	/**
 	 * Remove data.
-	 * @param index Index of the array to which you want to remove.
+	 * @param key Key name.
 	 */
 	public void remove( String key ) { object.remove( key ); }
 

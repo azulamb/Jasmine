@@ -188,6 +188,7 @@ public class JasmineArray extends JasmineData
 	/**
 	 * Remove data.
 	 * @param index Index of the array to which you want to remove.
+	 * @return JasmineData.
 	 */
 	public JasmineData remove( int index ) { return Jasmine.nullCheck( array.remove( index ) ); }
 
