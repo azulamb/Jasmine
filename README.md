@@ -5,6 +5,8 @@
 JasmineはJava用のJSONパーサーです。
 動作が結構適当(というよりかなりガバガバ)ですが、さくっと使う分には使えるはず。
 
+さくっと使いたい人は `Jasmine.jar` をダウンロードして下さい。
+
 ## 読み込み
 
 JARを取り込み、`import net.azulite.jasmine.*;` で使えます。
