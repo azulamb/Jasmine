@@ -1,5 +1,7 @@
 # Jasmine
 
+[JavaDoc](https://hirokimiyaoka.github.io/Jasmine/)
+
 JasmineはJava用のJSONパーサーです。
 動作が結構適当(というよりかなりガバガバ)ですが、さくっと使う分には使えるはず。
 
